@@ -19,35 +19,27 @@ import AdminPanel from './AdminPanel';
 import Footer from './Footer';
 
 export default function Store() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  // Lazy initialization para cargar desde localStorage sin useEffect
+  const [products, setProducts] = useState<Product[]>(() => {
+    const savedProducts = loadProductsFromStorage();
+    if (savedProducts && Array.isArray(savedProducts) && savedProducts.length > 0) {
+      return savedProducts as Product[];
+    }
+    return defaultProducts as Product[];
+  });
+
+  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+    return loadCartFromStorage();
+  });
+
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [toast, setToast] = useState<string | null>(null);
 
-  // Cargar productos y carrito desde localStorage al iniciar
-  useEffect(() => {
-    // Cargar productos (personalizados o por defecto)
-    const savedProducts = loadProductsFromStorage();
-    if (savedProducts && Array.isArray(savedProducts) && savedProducts.length > 0) {
-      setProducts(savedProducts as Product[]);
-    } else {
-      setProducts(defaultProducts as Product[]);
-    }
-
-    // Cargar carrito guardado
-    const savedCart = loadCartFromStorage();
-    if (savedCart.length > 0) {
-      setCartItems(savedCart);
-    }
-  }, []);
-
   // Guardar carrito en localStorage cuando cambia
   useEffect(() => {
-    if (cartItems.length >= 0) {
-      saveCartToStorage(cartItems);
-    }
+    saveCartToStorage(cartItems);
   }, [cartItems]);
 
   // Mostrar toast
@@ -82,6 +74,17 @@ export default function Store() {
     });
   }, [showToast]);
 
+  // Eliminar item del carrito
+  const handleRemoveItem = useCallback((productId: string, size: string, color: string) => {
+    setCartItems(prev =>
+      prev.filter(item =>
+        !(item.product.id === productId &&
+          item.selectedSize === size &&
+          item.selectedColor === color)
+      )
+    );
+  }, []);
+
   // Actualizar cantidad
   const handleUpdateQuantity = useCallback((productId: string, size: string, color: string, quantity: number) => {
     if (quantity <= 0) {
@@ -97,18 +100,7 @@ export default function Store() {
           : item
       )
     );
-  }, []);
-
-  // Eliminar item del carrito
-  const handleRemoveItem = useCallback((productId: string, size: string, color: string) => {
-    setCartItems(prev =>
-      prev.filter(item =>
-        !(item.product.id === productId &&
-          item.selectedSize === size &&
-          item.selectedColor === color)
-      )
-    );
-  }, []);
+  }, [handleRemoveItem]);
 
   // Vaciar carrito
   const handleClearCart = useCallback(() => {
@@ -195,8 +187,9 @@ export default function Store() {
         onClearCart={handleClearCart}
       />
 
-      {/* Modal de detalle de producto */}
+      {/* Modal de detalle de producto - key para resetear estado al cambiar producto */}
       <ProductDetailModal
+        key={selectedProduct?.id || 'no-product'}
         product={selectedProduct}
         onClose={handleCloseDetail}
         onAddToCart={(item) => {

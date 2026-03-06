@@ -58,6 +58,7 @@ export function openWhatsApp(cartItems: CartItem[]): void {
  * Guarda el carrito en localStorage
  */
 export function saveCartToStorage(cartItems: CartItem[]): void {
+  if (typeof window === 'undefined') return;
   try {
     localStorage.setItem('moda_cart', JSON.stringify(cartItems));
   } catch (error) {
@@ -69,6 +70,7 @@ export function saveCartToStorage(cartItems: CartItem[]): void {
  * Carga el carrito desde localStorage
  */
 export function loadCartFromStorage(): CartItem[] {
+  if (typeof window === 'undefined') return [];
   try {
     const stored = localStorage.getItem('moda_cart');
     return stored ? JSON.parse(stored) : [];
@@ -82,6 +84,7 @@ export function loadCartFromStorage(): CartItem[] {
  * Guarda productos personalizados en localStorage
  */
 export function saveProductsToStorage(products: unknown[]): void {
+  if (typeof window === 'undefined') return;
   try {
     localStorage.setItem('moda_products', JSON.stringify(products));
   } catch (error) {
@@ -93,6 +96,7 @@ export function saveProductsToStorage(products: unknown[]): void {
  * Carga productos personalizados desde localStorage
  */
 export function loadProductsFromStorage(): unknown[] | null {
+  if (typeof window === 'undefined') return null;
   try {
     const stored = localStorage.getItem('moda_products');
     return stored ? JSON.parse(stored) : null;

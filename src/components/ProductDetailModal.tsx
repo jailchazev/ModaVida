@@ -15,23 +15,12 @@ interface ProductDetailModalProps {
 }
 
 export default function ProductDetailModal({ product, onClose, onAddToCart }: ProductDetailModalProps) {
-  const [selectedSize, setSelectedSize] = useState('');
-  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedSize, setSelectedSize] = useState(product?.sizes[0] || '');
+  const [selectedColor, setSelectedColor] = useState(product?.colors[0] || '');
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
   const [error, setError] = useState('');
-
-  // Reset al cambiar producto
-  useEffect(() => {
-    if (product) {
-      setSelectedSize(product.sizes[0] || '');
-      setSelectedColor(product.colors[0] || '');
-      setSelectedImage(0);
-      setQuantity(1);
-      setError('');
-    }
-  }, [product]);
 
   // Cerrar con Escape
   useEffect(() => {

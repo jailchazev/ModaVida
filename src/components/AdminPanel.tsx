@@ -38,7 +38,13 @@ const ALL_SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL', '26', '28', '30', '32', '34
 const ALL_TAGS: ProductTag[] = ['nuevo', 'oferta', 'destacado'];
 
 export default function AdminPanel({ isOpen, onClose, products, onProductsChange }: AdminPanelProps) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // Verificar si ya está autenticado en esta sesión (lazy init para evitar setState en useEffect)
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('admin_auth') === 'true';
+    }
+    return false;
+  });
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [activeTab, setActiveTab] = useState<'list' | 'add' | 'edit'>('list');
@@ -47,12 +53,6 @@ export default function AdminPanel({ isOpen, onClose, products, onProductsChange
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [successMessage, setSuccessMessage] = useState('');
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
-
-  // Verificar si ya está autenticado en esta sesión
-  useEffect(() => {
-    const auth = sessionStorage.getItem('admin_auth');
-    if (auth === 'true') setIsAuthenticated(true);
-  }, []);
 
   const handleLogin = () => {
     if (password === ADMIN_PASSWORD) {
