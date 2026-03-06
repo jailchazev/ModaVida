@@ -1,0 +1,218 @@
+[
+  {
+    "id": "1",
+    "name": "Polo Clásico Premium",
+    "category": "Polos",
+    "description": "Polo de algodón pima 100% de alta calidad. Suave al tacto, transpirable y con corte moderno que se adapta perfectamente a cualquier ocasión casual o semiformal.",
+    "price": 59.90,
+    "originalPrice": 79.90,
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": ["Blanco", "Negro", "Azul marino", "Gris"],
+    "stock": 25,
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80"
+    ],
+    "tags": ["nuevo", "destacado"],
+    "featured": true,
+    "available": true
+  },
+  {
+    "id": "2",
+    "name": "Camisa Oxford Slim Fit",
+    "category": "Camisas",
+    "description": "Camisa Oxford de corte slim fit, perfecta para el trabajo o salidas formales. Tela resistente con acabado premium y botones de nácar.",
+    "price": 89.90,
+    "originalPrice": null,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Blanco", "Celeste", "Azul marino"],
+    "stock": 18,
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80"
+    ],
+    "tags": ["destacado"],
+    "featured": true,
+    "available": true
+  },
+  {
+    "id": "3",
+    "name": "Pantalón Chino Moderno",
+    "category": "Pantalones",
+    "description": "Pantalón chino de corte recto con tela stretch de alta calidad. Cómodo, elegante y versátil para cualquier ocasión.",
+    "price": 119.90,
+    "originalPrice": 149.90,
+    "sizes": ["28", "30", "32", "34", "36"],
+    "colors": ["Beige", "Negro", "Azul marino", "Verde oliva"],
+    "stock": 12,
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80"
+    ],
+    "tags": ["oferta"],
+    "featured": true,
+    "available": true
+  },
+  {
+    "id": "4",
+    "name": "Casaca Bomber Urbana",
+    "category": "Casacas",
+    "description": "Casaca bomber de estilo urbano con forro interior suave. Perfecta para el frío con un look moderno y juvenil. Cierre YKK de alta durabilidad.",
+    "price": 189.90,
+    "originalPrice": null,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Negro", "Verde militar", "Azul marino"],
+    "stock": 8,
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"
+    ],
+    "tags": ["nuevo", "destacado"],
+    "featured": true,
+    "available": true
+  },
+  {
+    "id": "5",
+    "name": "Vestido Floral Elegante",
+    "category": "Vestidos",
+    "description": "Vestido midi con estampado floral delicado. Tela fluida y ligera, ideal para eventos, salidas o días especiales. Cierre invisible en la espalda.",
+    "price": 149.90,
+    "originalPrice": 179.90,
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Floral rosa", "Floral azul", "Floral negro"],
+    "stock": 15,
+    "images": [
+      "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&q=80",
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&q=80"
+    ],
+    "tags": ["oferta", "destacado"],
+    "featured": true,
+    "available": true
+  },
+  {
+    "id": "6",
+    "name": "Conjunto Deportivo Pro",
+    "category": "Ropa Deportiva",
+    "description": "Conjunto deportivo de alto rendimiento con tecnología de secado rápido. Incluye polo y short/leggins. Ideal para gym, running o actividades al aire libre.",
+    "price": 129.90,
+    "originalPrice": null,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Negro/Rojo", "Azul/Blanco", "Gris/Verde"],
+    "stock": 20,
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80"
+    ],
+    "tags": ["nuevo"],
+    "featured": false,
+    "available": true
+  },
+  {
+    "id": "7",
+    "name": "Polo Oversize Streetwear",
+    "category": "Polos",
+    "description": "Polo oversize de estilo streetwear con diseño gráfico exclusivo. Tela gruesa de algodón 100%, perfecta para un look urbano y moderno.",
+    "price": 69.90,
+    "originalPrice": null,
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Blanco", "Negro", "Gris jaspeado"],
+    "stock": 30,
+    "images": [
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80"
+    ],
+    "tags": ["nuevo"],
+    "featured": false,
+    "available": true
+  },
+  {
+    "id": "8",
+    "name": "Camisa Lino Verano",
+    "category": "Camisas",
+    "description": "Camisa de lino natural, perfecta para el verano. Transpirable, fresca y con un estilo relajado pero elegante. Ideal para la playa o salidas casuales.",
+    "price": 99.90,
+    "originalPrice": 119.90,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Blanco", "Beige", "Azul cielo", "Verde menta"],
+    "stock": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80",
+      "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600&q=80"
+    ],
+    "tags": ["oferta"],
+    "featured": false,
+    "available": true
+  },
+  {
+    "id": "9",
+    "name": "Jean Skinny Premium",
+    "category": "Pantalones",
+    "description": "Jean skinny de denim premium con elastano para mayor comodidad. Corte moderno que estiliza la figura. Lavado especial para un look auténtico.",
+    "price": 139.90,
+    "originalPrice": null,
+    "sizes": ["26", "28", "30", "32", "34"],
+    "colors": ["Azul clásico", "Negro", "Azul oscuro"],
+    "stock": 0,
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80",
+      "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600&q=80"
+    ],
+    "tags": ["agotado"],
+    "featured": false,
+    "available": false
+  },
+  {
+    "id": "10",
+    "name": "Casaca Cuero Sintético",
+    "category": "Casacas",
+    "description": "Casaca de cuero sintético de alta calidad con acabado premium. Estilo rockero y moderno, perfecta para dar un toque especial a cualquier outfit.",
+    "price": 229.90,
+    "originalPrice": 279.90,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Negro", "Marrón"],
+    "stock": 5,
+    "images": [
+      "https://images.unsplash.com/photo-1520975954732-35dd22299614?w=600&q=80",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80"
+    ],
+    "tags": ["oferta"],
+    "featured": false,
+    "available": true
+  },
+  {
+    "id": "11",
+    "name": "Vestido Cocktail Negro",
+    "category": "Vestidos",
+    "description": "Vestido de cocktail negro clásico con escote en V y falda midi. Tela de alta calidad con caída perfecta. Ideal para eventos formales y celebraciones.",
+    "price": 199.90,
+    "originalPrice": null,
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Negro", "Vino", "Azul noche"],
+    "stock": 10,
+    "images": [
+      "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&q=80",
+      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=80"
+    ],
+    "tags": ["destacado"],
+    "featured": true,
+    "available": true
+  },
+  {
+    "id": "12",
+    "name": "Leggins Deportivos Mujer",
+    "category": "Ropa Deportiva",
+    "description": "Leggins deportivos de alta compresión con tecnología anti-transparencia. Cintura alta para mayor soporte. Perfectos para yoga, pilates o entrenamiento.",
+    "price": 79.90,
+    "originalPrice": 99.90,
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Negro", "Gris", "Azul marino", "Morado"],
+    "stock": 35,
+    "images": [
+      "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600&q=80",
+      "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=600&q=80"
+    ],
+    "tags": ["oferta", "nuevo"],
+    "featured": false,
+    "available": true
+  }
+]
