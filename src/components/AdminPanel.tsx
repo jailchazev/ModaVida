@@ -16,7 +16,7 @@ interface AdminPanelProps {
   onProductsChange: (products: Product[]) => void;
 }
 
-const ADMIN_PASSWORD = 'modavida2025';
+const ADMIN_PASSWORD = '$h3nL0ng.247530';
 
 const emptyProduct: Omit<Product, 'id'> = {
   name: '',
@@ -310,7 +310,7 @@ export default function AdminPanel({ isOpen, onClose, products, onProductsChange
                     Ingresar
                   </button>
                   <p className="text-xs text-center mt-3" style={{ color: 'var(--color-gray-400)' }}>
-                    Contraseña por defecto: modavida2025
+                    
                   </p>
                 </div>
               </div>
